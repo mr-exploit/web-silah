@@ -13,7 +13,7 @@ const FormEditUser = () => {
     useEffect(()=>{
         const getUserById = async () =>{
             try {
-                const response = await axios.get(`http://3.1.83.49:5000/validasi/${id}`);
+                const response = await axios.get(`http://server.silah.website:5000/validasi/${id}`);
                 setvalid(response.data.validasi);
                 setktr(response.data.keterangan);
             } catch (error) {
@@ -28,7 +28,7 @@ const FormEditUser = () => {
     const UpdateValidasi = async(e) => {
         e.preventDefault();
         try {
-            await axios.patch(`http://3.1.83.49:5000/validasi/${id}`, {
+            await axios.patch(`http://server.silah.website:5000/validasi/${id}`, {
                 validasi: valid,
                 keterangan: ktr
             });

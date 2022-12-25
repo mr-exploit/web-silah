@@ -2,7 +2,6 @@ import React,{ useState } from "react";
 import {useNavigate} from "react-router-dom";
 import { Button, Menu} from 'antd';
 import { useSelector } from 'react-redux';
-// import '../App.css';
 import 'antd/dist/antd.min.css';
 import { HomeOutlined, 
   UserAddOutlined, 

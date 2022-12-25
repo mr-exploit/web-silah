@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
-import FormEditKerusakan from './FormEditPerbaikan';
+// import FormEditKerusakan from './FormEditPerbaikan';
 
 
 const EditKerusakan = () => {
@@ -23,7 +23,7 @@ const EditKerusakan = () => {
     },[]);
 
     const getProductsById = async () =>{
-        const response = await axios.get(`http://server.silah.website:5000/kerusakan/${id}`);
+        const response = await axios.get(`http://localhost:5000/kerusakan/${id}`);
         setTitle(response.data.judul);
         setDes(response.data.desc);
         
