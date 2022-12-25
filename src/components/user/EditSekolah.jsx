@@ -19,7 +19,7 @@ const FormEditSekolah = () => {
     useEffect(()=>{
         const getUserById = async () =>{
             try {
-                const response = await axios.get(`http://localhsot:5000/datasekolah/${id}`);
+                const response = await axios.get(`http://server.silah.website:5000/datasekolah/${id}`);
                 setNameScholl(response.data.nameScholl);
                 setNpsn(response.data.npsn);
                 setpengelolaan(response.data.pengelolaan);
@@ -49,7 +49,7 @@ const FormEditSekolah = () => {
         formData.append("nohp", nohp);
         formData.append("kepsek", kepsek);
         try {
-            await axios.patch(`http://localhost:5000/datasekolah/${id}`,formData,{
+            await axios.patch(`http://server.silah.website:5000/datasekolah/${id}`,formData,{
                 headers:{
                     "Content-Type": "multipart/form-data",
                 },

@@ -52,7 +52,7 @@ const FormAddKerusakan = () => {
         formData.append("title", title);
         formData.append("deskripsi", deskripsi);
         try {
-            await axios.post("http://localhost:5000/kerusakan", formData,{
+            await axios.post("http://server.silah.website:5000/kerusakan", formData,{
                 headers:{
                     "Content-Type": "multipart/form-data",
                 },

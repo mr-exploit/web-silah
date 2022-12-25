@@ -16,7 +16,7 @@ const FormAddSekolah = () => {
     const saveData = async(e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:5000/datasekolah', {
+            await axios.post('http://server.silah.website:5000/datasekolah', {
                 namescholl: namescholl,
                 Npsn: Npsn,
                 pengelola: pengelola,

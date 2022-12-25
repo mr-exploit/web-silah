@@ -13,7 +13,7 @@ const ReviewLaporan = () => {
   const { user } = useSelector((state) => state.auth);
 
   const getReview = async() =>{
-    const response = await axios.get("http://localhost:5000/kerusakan");
+    const response = await axios.get("http://server.silah.website:5000/kerusakan");
     setReview(response.data);
 }
 

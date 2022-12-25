@@ -13,13 +13,13 @@ const PerbaikanList = () => {
     const { user } = useSelector((state) => state.auth);
 
     const getPerbaikan = async() =>{
-        const response = await axios.get("http://localhost:5000/perbaikan");
+        const response = await axios.get("http://server.silah.website:5000/perbaikan");
         setPerbaikan(response.data);
     }
 
     const deletePerbaikan = async(id) =>{
         try {
-            await axios.delete(`http://localhost:5000/perbaikan/${id}`);
+            await axios.delete(`http://server.silah.website:5000/perbaikan/${id}`);
             getPerbaikan();
         } catch (error) {
             console.log(error);

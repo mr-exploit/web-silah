@@ -23,7 +23,7 @@ const EditKerusakan = () => {
     },[]);
 
     const getProductsById = async () =>{
-        const response = await axios.get(`http://localhost:5000/kerusakan/${id}`);
+        const response = await axios.get(`http://server.silah.website:5000/kerusakan/${id}`);
         setTitle(response.data.judul);
         setDes(response.data.desc);
         
@@ -70,7 +70,7 @@ const EditKerusakan = () => {
         formData.append("title", title);
         formData.append("deskripsi", deskripsi);
         try {
-            await axios.patch(`http://localhost:5000/kerusakan/${id}`, formData,{
+            await axios.patch(`http://server.silah.website:5000/kerusakan/${id}`, formData,{
                 headers:{
                     "Content-Type": "multipart/form-data",
                 },

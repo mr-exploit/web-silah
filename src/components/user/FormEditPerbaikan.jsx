@@ -14,7 +14,7 @@ const EditPerbaikan = () => {
     },[]);
 
     const getPerbaikanById = async () =>{
-        const response = await axios.get(`http://localhost:5000/perbaikan/${id}`);
+        const response = await axios.get(`http://server.silah.website:5000/perbaikan/${id}`);
         setTitleper(response.data.judulper);
         setDesper(response.data.descper);
     }
@@ -26,7 +26,7 @@ const EditPerbaikan = () => {
         formData.append("judul", titleper);
         formData.append("desk", deskripsiper);
         try {
-            await axios.patch(`http://localhost:5000/perbaikan/${id}`, formData,{
+            await axios.patch(`http://server.silah.website:5000/perbaikan/${id}`, formData,{
                 headers:{
                     "Content-Type": "multipart/form-data",
                 },

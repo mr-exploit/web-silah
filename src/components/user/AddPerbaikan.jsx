@@ -15,7 +15,7 @@ const AddPerbaikan = () => {
         formData.append("judul", judul);
         formData.append("desk", deskripsi);
         try {
-            await axios.post("http://localhost:5000/perbaikan", formData,{
+            await axios.post("http://server.silah.website:5000/perbaikan", formData,{
                 headers:{
                     "Content-Type": "multipart/form-data",
                 },
