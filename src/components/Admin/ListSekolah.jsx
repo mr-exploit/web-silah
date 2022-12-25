@@ -13,12 +13,12 @@ const FormSekolah = () => {
   const { user } = useSelector((state) => state.auth);
 
   const getDataSekolah = async () =>{
-      const response = await axios.get('http://localhost:5000/datasekolah');
+      const response = await axios.get('http://server.silah.website:5000/datasekolah');
       setDatasekolah(response.data);
   };
 
   const deleteUser = async (id) =>{ //userId
-      await axios.delete(`http://localhost:5000/datasekolah/${id}`);//{userId}
+      await axios.delete(`http://server.silah.website:5000/datasekolah/${id}`);//{userId}
       getDataSekolah();
   };
 

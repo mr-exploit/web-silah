@@ -19,7 +19,7 @@ const FormPerbaikanValidasi = () => {
     useEffect(()=>{
         const getUserById = async () =>{
             try {
-                const response = await axios.get(`http://localhost:5000/perbaikan/${id}`);
+                const response = await axios.get(`http://server.silah.website:5000/perbaikan/${id}`);
                 setvalidper(response.data.validasiper);
                 setktrper(response.data.keteranganper);
                 setusername(response.data.user.name);
@@ -43,7 +43,7 @@ const FormPerbaikanValidasi = () => {
         formData.append("validper", validper);
         formData.append("ktrper", ktrper);
         try {
-            await axios.patch(`http://localhost:5000/perbaikan/validasi/${id}`,formData,{
+            await axios.patch(`http://server.silah.website:5000/perbaikan/validasi/${id}`,formData,{
                 headers:{
                     "Content-Type": "multipart/form-data",
                 },

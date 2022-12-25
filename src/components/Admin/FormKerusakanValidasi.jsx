@@ -27,7 +27,7 @@ const FormEditValidasi = () => {
     useEffect(()=>{
         const getUserById = async () =>{
             try {
-                const response = await axios.get(`http://localhost:5000/validasi/${id}`);
+                const response = await axios.get(`http://server.silah.website:5000/validasi/${id}`);
                 setvalid(response.data.validasi);
                 setktr(response.data.keterangan);
                 setusername(response.data.user.name);
@@ -59,7 +59,7 @@ const FormEditValidasi = () => {
         formData.append("valid", valid);
         formData.append("ktr", ktr);
         try {
-            await axios.patch(`http://localhost:5000/validasi/${id}`,formData,{
+            await axios.patch(`http://server.silah.website:5000/validasi/${id}`,formData,{
                 headers:{
                     "Content-Type": "multipart/form-data",
                 },

@@ -15,7 +15,7 @@ const DetailValKerusakan = () =>{
     useEffect(()=>{
         const getUserById = async () =>{
             try {
-                const response = await axios.get(`http://localhost:5000/kerusakan/${id}`);
+                const response = await axios.get(`http://server.silah.website:5000/kerusakan/${id}`);
                 settopik(response.data.judul);
                 setdesc(response.data.desc);
                 setname(response.data.user.name);
