@@ -23,7 +23,7 @@ const EditKerusakan = () => {
     },[]);
 
     const getProductsById = async () =>{
-        const response = await axios.get(`http://localhost:5000/kerusakan/${id}`);
+        const response = await axios.get(`http://server.silah.website:5000/kerusakan/${id}`);
         setTitle(response.data.judul);
         setDes(response.data.desc);
         
